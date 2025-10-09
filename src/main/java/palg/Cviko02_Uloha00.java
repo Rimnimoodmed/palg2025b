@@ -3,17 +3,17 @@ package palg;
 public class Cviko02_Uloha00 {
     public static void main(String[] args)
     {
-        int a= 0;
+        int a= Integer.MAX_VALUE;
         int b= 0;
         double c = 0;
         double d = 0;
-        int e1 = 0;
-        int e2=0;
-        //System.out.println(5 OP 1 == 10); // Doplň operátor aby se vypsalo true
-        //System.out.println(5 OP 10 == 5); // Doplň operátor aby se vypsalo true
-        //System.out.println(5 OP 6 == 0); // Doplň operátor aby se vypsalo true
-        //System.out.println(-7 OP 5 == -2); // Doplň operátor aby se vypsalo true
-        //System.out.println(9 OP 1 == 4); // Doplň operátor aby se vypsalo true
+        int e1 = 8;
+        int e2=8;
+        //System.out.println(5  1 == 10); // Doplň operátor aby se vypsalo true
+        System.out.println(5 % 10 == 5); // Doplň operátor aby se vypsalo true
+        System.out.println(5 / 6 == 0); // Doplň operátor aby se vypsalo true
+        System.out.println(-7 + 5 == -2); // Doplň operátor aby se vypsalo true
+        System.out.println(9 >> 1 == 4); // Doplň operátor aby se vypsalo true
         System.out.println(a > a + 1); // Doplň hodnotu a aby se vypsalo true
         System.out.println(b < 0 && Math.abs(b) == b); // Doplň hodnotu b aby se vypsalo true
         System.out.println( 3 * c / 10 != 0.3 * c); // Doplň hodnotu c aby se vypsalo true

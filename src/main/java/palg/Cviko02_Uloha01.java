@@ -7,16 +7,21 @@ public class Cviko02_Uloha01 {
 
     public static void main(String[] args)
     {
-//        if(isAscending(...)) {
-//            System.out.println("OK");
-//        }
-//        else {
-//            System.out.println("NOT_OK");
-//        }
+/*        var floats=Cviko02_FileUtils.floatsFromFile("spaceX.txt");
+        if(isAscending(...)) {
+           System.out.println("OK");
+        }
+        else {
+           System.out.println("NOT_OK");
+       } */
     }
 
-    //public static ... isAscending( ... )
-    //{
-
-    //}
+    public static boolean  isAscending( float[] floats ){
+        for (int i = 0; i < floats.length; i++) {
+            if (floats[i]<=floats[i+1]){
+                return false;
+            }
+        }
+        return true;
+    }
 }
