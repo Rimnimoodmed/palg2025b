@@ -4,11 +4,19 @@ public class Cviko03_Uloha03
 {
     public static void main(String[] args)
     {
+        double[][] matrix0 = {{1,1,2,2,1},{1,2,2,4,4},{1,2,3,4,1},{1,4,1,2,5}};
+        System.out.println(sum(matrix0));
     }
 
     // Doplň metodu, která spočítá součet všech prvků 2D pole
     public static double sum(double[][] matrix)
     {
-        return Double.NaN;
+        double x = 0;
+        for (int f = 0; f < matrix.length; f++) {
+            for (int g = 0; g < matrix[f].length; g++) {
+                x += matrix[f][g];
+            }
+        }
+        return x;
     }
 }
