@@ -11,19 +11,11 @@ public class Cviko03_Uloha06
                 {10.9, 2.1, 2.1, 4.0, 4.6},
                 {0.1, 3.1, 7.2, 7.1, 9.6}};
         mirror(matrix0);
+        Cviko03_Uloha04.print(matrix0);
     }
 
     // Doplň metodu, která matici převrátí podle hlavní diagonály (osy)
     public static void mirror(double[][] matrix)
     {
-        double[][] matrix1 = matrix;
-        for (int i = 0; i < matrix.length; i++) {
-            System.out.println("\n");
-            for (int j = 0; j < matrix[i].length; j++) {
-                matrix1[i][j] = matrix[j][i];
-                System.out.printf("%.2f ",matrix1[i][j]);
-            }
-        }
-        
     }
 }

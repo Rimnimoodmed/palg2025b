@@ -15,16 +15,14 @@ public class Cviko03_Uloha04
 
     // Doplň metodu, která vypíše prvky matice do konzole
     public static void print(double[][] matrix)
-    {   
-        
-    double x = 0;
-        for (int f = 0; f < matrix.length; f++) {
-            System.out.println("\n");
-            for (int g = 0; g < matrix[f].length; g++) {
-                x += matrix[f][g];
-                System.out.printf("%.2f ",matrix[f][g]);
+    {
+        for(int y=0; y<matrix.length; y++)
+        {
+            for(int x=0; x<matrix[y].length; x++)
+            {
+                System.out.printf("%6.2f",matrix[y][x]);
             }
+            System.out.println();
         }
-        System.out.println("\nsum41 "+x);
     }
 }
