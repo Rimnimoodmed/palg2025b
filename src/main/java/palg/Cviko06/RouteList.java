@@ -10,8 +10,29 @@ public class RouteList
                 first);
         first = newNode;
     }
-    public void addLast(Location loc){}
-    public Location get(int index)
-    { return null;}
+    public void addLast(Location loc){
+        var newNode = new RouteListNode(loc, null);
+        if (first == null) {
+            first = newNode;
+            return;
+        }
+        var lastNode = first;
+        while (lastNode.getNext() != null) {
+            lastNode = lastNode.getNext();
+        }
+        lastNode.setNext(newNode);
+    }
+    public Location get(int index){ 
+        var node = first;
+        if (first == null) {
+            throw new IndexOutOfBoundsException();
+        }
+        for (int i = 0; i < index; i++) {
+            if (node.getNext() == null) {
+                throw new IndexOutOfBoundsException();
+            }
+            node = node.getNext();
+        }
+        return node.getLocation();}
 
 }
