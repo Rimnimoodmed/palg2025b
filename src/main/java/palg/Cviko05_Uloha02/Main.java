@@ -13,11 +13,15 @@ public class Main
         //   pokud 100_000 krát provedeme add nebo remove s pravděpodobností 1:1
         Scanner s = new Scanner(System.in);
         Waiting uloziste;
-        if(s.nextLine().equals("QUEUE")){
-            uloziste = new queue();
-        }
-        else{
-            uloziste = new stack();
-        }
+        if(s.nextLine().equals("QUEUE"))
+            uloziste = new Queue();
+        else
+            uloziste = new Stack();
+        uloziste.add("AHOJ");
+
+    }
+    private static void Ukazka(Queue k)
+    {
+        k.add("AHOJ");
     }
 }
