@@ -1,6 +1,9 @@
 package palg.Cviko06;
 
-public class RouteList
+import java.util.Iterator;
+import java.util.List;
+
+public class RouteList implements Iterable<Location>
 {
     private RouteListNode first;
 
@@ -22,17 +25,30 @@ public class RouteList
         }
         lastNode.setNext(newNode);
     }
-    public Location get(int index){ 
-        var node = first;
-        if (first == null) {
+    public Location get(int index)
+    {
+        if(first == null || index < 0)
             throw new IndexOutOfBoundsException();
-        }
-        for (int i = 0; i < index; i++) {
-            if (node.getNext() == null) {
-                throw new IndexOutOfBoundsException();
-            }
-            node = node.getNext();
-        }
-        return node.getLocation();}
 
+        var current = first;
+        for (int i=0; i<index; i++)
+        {
+            if(current.getNext() == null)
+                throw new IndexOutOfBoundsException();
+            current = current.getNext();
+        }
+        return current.getLocation();
+    }
+
+    @Override
+    public Iterator<Location> iterator()
+    {
+        return null;
+        // return new Iterator<Location>(first);
+
+        // Přidat třídu RouteListIterator
+        // která bude obalem nad RouteListNode
+        // a bude implementovat rozhraní
+        // Iterator<Location>
+    }
 }
