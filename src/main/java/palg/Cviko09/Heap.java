@@ -12,4 +12,13 @@ public class Heap
         this.data = new Message[capacity];
         count = 0;
     }
+    private int leftChild(int index){
+        return 2*index+1;
+    }
+    private int rightChild(int index){
+        return 2*index+2;
+    }
+    private int parent(int index){
+        return (index-1)/2;
+    }
 }
