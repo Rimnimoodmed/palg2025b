@@ -4,7 +4,7 @@ import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
-        var r = search(new File("C:\\Pictures"), "4e68.png");
+        var r = search(new File("P:\\palg2025b"), "Balikovna.java");
         System.out.println(r);
     }
 
