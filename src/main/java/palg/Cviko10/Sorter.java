@@ -1,13 +1,12 @@
 package palg.Cviko10;
 
 
-import palg.Messages.Message;
-
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import palg.Messages.Message;
 
 public abstract class Sorter
 {
@@ -46,5 +45,11 @@ public abstract class Sorter
         } catch (IOException e) {
             System.out.println(e);
         }
+    }
+
+    protected void swap(Message[] m, int a, int b){
+        var temp = m[a];
+        m[a] = m[b];
+        m[b] = temp;
     }
 }

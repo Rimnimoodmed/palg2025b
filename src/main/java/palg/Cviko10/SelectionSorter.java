@@ -7,6 +7,18 @@ public class SelectionSorter extends Sorter
     @Override
     public void sort(Message[] messages)
     {
-        // TODO 3: doplnit kód
+        for (int h = 0; h < messages.length; h++) {
+            var min = minIndex(messages, h);
+            swap(messages, min, h);
+        }
+    }
+    private int minIndex(Message[] m, int from){
+        int min = from;
+        for (int i = from+1; i < m.length; i++) {
+            if(m[i].compareTo(m[min]) < 0){
+                min = i;
+            }
+        }
+        return min;
     }
 }

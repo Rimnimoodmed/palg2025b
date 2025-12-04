@@ -8,6 +8,11 @@ public class HeapSorter extends Sorter
     {
         palg.Cviko09.Heap heap = new palg.Cviko09.Heap(messages.length);
 
-        // TODO 2: doplnit kód
+        for (Message message : messages) {
+            heap.add(message);
+        }
+        for (int i = 0; i < messages.length; i++) {
+            messages[i] = heap.extractMin();
+        }
     }
 }
